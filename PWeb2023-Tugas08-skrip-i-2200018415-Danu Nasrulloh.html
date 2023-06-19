@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="home.css">
+  <title>website Danu Nasrulloh</title>
+</head>
+<body>
+  <center>
+    <div class="kartu-Danu">
+      <span class="blok">LOGIN TO COMMUNITY</span>
+      <img class="photo" src="logo.jpg" alt="danu" width="60%">
+      <h3>RUIBIXX</h3>
+      <p>
+      <form id="form">
+        <label>Username</label>
+        <input type="text" id="username" name="username">
+        <p>
+        <label>Email</label>
+        <input type="text" id="email" name="email">
+        <p>
+        <label>Message</label>
+        <input type="text" id="message" name="message">
+        <p></p>
+        <button type="button" onclick="submitForm()">Submit</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </center>
+  
+  <script>
+    function submitForm() {
+      var username = document.getElementById("username").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Validasi input
+      if (username === "") {
+        alert("Please enter your username.");
+        return;
+      }
+
+      if (email === "") {
+        alert("Please enter your email.");
+        return;
+      }
+
+      if (message === "") {
+        alert("Please enter your message.");
+        return;
+      }
+
+      // Menampilkan pesan
+      document.getElementById("result").innerHTML = "Thank you, " + username + "! We have received your message: " + message;
+      document.getElementById("form").reset();
+    }
+  </script>
+
+  <footer>
+    <p>Created by Danu Nasrulloh</p>
+  </footer>
+</body>
+</html>
